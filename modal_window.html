@@ -11,7 +11,7 @@
 <body>
   <div id="app">
     <button v-on:click="openModal">開く</button>
-    <div id="overlay" v-show="showContent">
+    <div id="overlay" v-show="showContent" v-on:click="closeModal">
       <div class="content">
         <p>モーダルウィンドウ</p>
         <button v-on:click="closeModal">閉じる</button>
