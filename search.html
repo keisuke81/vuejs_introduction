@@ -12,8 +12,8 @@
 <body>
   <div id="app">
     <input v-model="search" />
-    <div v-for="filteredUsers in users" :key="filteredUsers">
-      {{filteredUsers}}
+    <div v-for="user in filteredUsers" key="first">
+      {{user}}
     </div>
   </div>
 
@@ -23,11 +23,7 @@
       data() {
         return {
           search: "",
-          users: [
-            '佐藤',
-            '山田',
-            '鈴木',
-            '田中']
+          users: ['佐藤','山田','鈴木','田中']
         };
       },
       computed: {

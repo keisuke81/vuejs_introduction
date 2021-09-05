@@ -11,8 +11,8 @@
 <body>
   <div id="app">
     <button v-on:click="openModal">開く</button>
-    <div id="overlay" v-show="showContent" v-on:click="closeModal">
-      <div class="content">
+    <div id="overlay" v-show="showContent" v-on:click.self="closeModal">
+      <div class="content" v-show="showContent">
         <p>モーダルウィンドウ</p>
         <button v-on:click="closeModal">閉じる</button>
       </div>
@@ -36,7 +36,6 @@
   </script>
   <style>
     #overlay{
-      z-index: 1;
       position:fixed;
       top:0;
       left:0;
